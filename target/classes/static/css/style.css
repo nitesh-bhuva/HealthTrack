@@ -1,0 +1,370 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  color: #0d47a1;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #0d47a1;
+}
+
+/* Navigation */
+nav {
+  background-color: #ffffff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0d47a1;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #0d47a1;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #1565c0;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background-color: #bbdefb;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #1565c0;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0d47a1;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* IMAGE */
+.image-row {
+  display: flex;
+  flex-wrap: wrap; /* Allows images to stack on smaller screens */
+  gap: 40px;
+  justify-content: center; /* Center images in the row */
+}
+
+.image-row img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  flex: 1 1 300px; /* Grow, shrink, base width */
+}
+
+/* Optional: Adjust layout for small screens */
+@media (max-width: 768px) {
+  .image-row {
+    gap: 20px;
+  }
+
+  .image-row img {
+    max-width: 100%; /* Use full container width */
+  }
+}
+
+
+/* Cards */
+.service-cards,
+.doctor-cards,
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #1565c0;
+}
+
+/*Doctor */
+.doctor-cards,
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap; /* keeps cards in one line */
+  overflow-x: auto; /* allows horizontal scroll on small screens */
+  padding-bottom: 10px; /* some space below if scroll appears */
+}
+
+/* Optional: style scrollbar for better look (works on WebKit browsers) */
+.doctor-cards::-webkit-scrollbar,
+.testimonial-cards::-webkit-scrollbar {
+  height: 8px;
+}
+
+.doctor-cards::-webkit-scrollbar-thumb,
+.testimonial-cards::-webkit-scrollbar-thumb {
+  background-color: #1565c0;
+  border-radius: 4px;
+}
+
+/* Appointment Section */
+.appointment {
+  text-align: center;
+  background-color: #e3f2fd;
+}
+
+/* FAQ */
+.faq ul {
+  list-style-type: square;
+  padding-left: 40px;
+  font-size: 16px;
+}
+
+/* Location Map */
+.location iframe {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Newsletter */
+.newsletter {
+  text-align: center;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 250px;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background-color: #1565c0;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #0d47a1;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  color: #1565c0;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  color: #0d47a1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1 1 300px;
+}
+
+.footer-left h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.footer-left p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.footer-right h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-right ul li {
+  margin-bottom: 10px;
+}
+
+.footer-right ul li a {
+  text-decoration: none;
+  color: #0d47a1;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-right ul li a:hover {
+  color: #0d47a1;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #0d47a1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-right ul {
+    display: inline-block;
+  }
+
+  .footer-right ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+}
+.cus-btn{
+	  background-color: #1565c0;
+	  color: white;
+	  padding: 12px 25px;
+	  border: none;
+	  border-radius: 25px;
+	  text-decoration: none;
+	  font-size: 16px;
+	  font-weight: bold;
+	  transition: background-color 0.3s ease;
+	}
+.cus-btn:hover {
+	  background-color: #0d47a1;
+	
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+  }
+
+  .service-cards,
+  .doctor-cards,
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .card {
+    width: 90%;
+  }
+}

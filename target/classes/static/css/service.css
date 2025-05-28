@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  color: #0d47a1;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #0d47a1;
+}
+/* Navigation */
+nav {
+  background-color: #ffffff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0d47a1;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #0d47a1;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #1565c0;
+}
+
+
+/* Container & Section Headings */
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.text-center h2 {
+  color: #023e8a;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* Service Cards */
+.service-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon i {
+  font-size: 2.5rem;
+  color: #0077b6;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #0077b6;
+}
+
+.card-text {
+  color: #555;
+}
+
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  color: #0d47a1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1 1 300px;
+}
+
+.footer-left h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.footer-left p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.footer-right h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-right ul li {
+  margin-bottom: 10px;
+}
+
+.footer-right ul li a {
+  text-decoration: none;
+  color: #0d47a1;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-right ul li a:hover {
+  color: #0d47a1;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #0d47a1;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .nav-link {
+    margin-left: 0;
+  }
+
+  .service-icon i {
+    font-size: 2rem;
+  }
+}
