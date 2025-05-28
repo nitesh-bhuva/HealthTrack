@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  color: #0d47a1;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #0d47a1;
+}
+/* Navigation */
+nav {
+  background-color: #ffffff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0d47a1;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #0d47a1;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #1565c0;
+}
+
+
+/* Container for main content */
+.container {
+  max-width: 900px;
+  margin: 40px auto 60px;
+  background: #fff;
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(21, 101, 192, 0.15);
+  flex-grow: 1;
+}
+
+/* Headings */
+h1, h2 {
+  color: #0d47a1;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 2.75rem;
+}
+
+h2 {
+  font-size: 1.9rem;
+  margin-top: 2rem;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+  line-height: 1.55;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+ul li {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: #0d47a1;
+  position: relative;
+  padding-left: 30px;
+}
+
+/* Emoji bullet points styling */
+ul li::before {
+  content: attr(data-icon);
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Footer */
+footer {
+  background-color: #1565c0;
+  color: white;
+  padding: 2rem 3rem;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+  font-size: 0.95rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-left h3,
+.footer-right h4 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.footer-left p,
+.footer-right ul {
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-right ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-right ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-right ul li a:hover,
+.footer-right ul li a:focus {
+  color: #e3f2fd;
+  outline: none;
+}
+
+.footer-bottom {
+  margin-top: 1.5rem;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* Button style (if you want buttons) */
+button, .btn {
+  background-color: #1565c0;
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+button:hover, .btn:hover,
+button:focus, .btn:focus {
+  background-color: #0d47a1;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 1rem 1.5rem;
+  }
+
+  .container {
+    margin: 20px 15px 40px;
+    padding: 2rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  color: #0d47a1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1 1 300px;
+}
+
+.footer-left h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.footer-left p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.footer-right h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-right ul li {
+  margin-bottom: 10px;
+}
+
+.footer-right ul li a {
+  text-decoration: none;
+  color: #0d47a1;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-right ul li a:hover {
+  color: #0d47a1;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #0d47a1;
+}
+
